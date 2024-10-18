@@ -27,10 +27,24 @@ mfd, mendagri = kamus()
 def main():
     st.header("DATA POKOK DESA/ KELURAHAN", divider='rainbow')
     st.success("Sumber: e-prodeskel Kemendagri")
+    with st.expander("Master File Desa"):
+        mfd32 = pd.read_csv('data/mfd_23_1_32.csv', 
+                            dtype={'kdkab':'str', 'kdkec':'str', 'kddesa':'str', 'iddesa':'str'})
+        kolom1, kolom2 = st.columns(2)
+        with kolom1:
+            datakab = mfd32['nmkab'].unique().tolist()
+            kabterpilih = st.selectbox("Filter Kabupaten/Kota", datakab, key='namakabkot')
+        with kolom2:
+            datakec = mfd32[mfd32['nmkab'] == kabterpilih]['nmkec'].unique().tolist()
+            kecterpilih = st.selectbox("Filter Kecamatan", datakec, key='namakec')
+        if kolom1 and kolom2:
+            with st.container(border=True):
+                tabelmfd = mfd32[(mfd32['nmkab'] == kabterpilih) & (mfd32['nmkec'] == kecterpilih)]
+                st.dataframe (tabelmfd, hide_index=True, use_container_width=True)
+    
+    st.subheader("", divider='green')
+            
     with st.container(border=True):
-        
-        
-        # Dropdown for user to select code (replace dummy options with actual values)
         kol1, kol2, kol3 = st.columns(3)
         with kol1:
             kabkot = mfd['idkab'].unique().tolist()

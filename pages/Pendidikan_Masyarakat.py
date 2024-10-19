@@ -54,6 +54,23 @@ if wilayah == 'Bogor':
     df = pd.read_html(str(table))[0]
     
     st.dataframe(df, use_container_width=True, hide_index=True)
+    
+    st.subheader("", divider='orange')
+    
+    data = pd.read_csv('data/dikdas/3201kodedikbud.csv', dtype={'kodekec':'str'})
+    kecterpilih = st.selectbox('Pilih Kecamatan', data['namakec'], key='kec01')
+    kodeterpilih = data.loc[data['namakec'] == kecterpilih, 'kodekec'].values[0]
+    
+    url2 = f'https://referensi.data.kemdikbud.go.id/pendidikan/dikmas/0205{kodeterpilih}/3'
+    response2 = requests.get(url2)
+    soup2 = BeautifulSoup(response2.content, 'html.parser')
+
+    # Temukan tabel dalam HTML
+    table2 = soup2.find('table')
+    df2 = pd.read_html(str(table2))[0]
+    
+    st.dataframe(df2, use_container_width=True, hide_index=True)
+    
 
 if wilayah == 'Sukabumi':
     url = 'https://referensi.data.kemdikbud.go.id/pendidikan/dikmas/020600/2'
@@ -66,6 +83,23 @@ if wilayah == 'Sukabumi':
     
     st.dataframe(df, use_container_width=True, hide_index=True)
     
+    st.subheader("", divider='orange')
+    
+    data = pd.read_csv('data/dikdas/3202kodedikbud.csv', dtype={'kodekec':'str'})
+    kecterpilih = st.selectbox('Pilih Kecamatan', data['namakec'], key='kec01')
+    kodeterpilih = data.loc[data['namakec'] == kecterpilih, 'kodekec'].values[0]
+    
+    url2 = f'https://referensi.data.kemdikbud.go.id/pendidikan/dikmas/0206{kodeterpilih}/3'
+    response2 = requests.get(url2)
+    soup2 = BeautifulSoup(response2.content, 'html.parser')
+
+    # Temukan tabel dalam HTML
+    table2 = soup2.find('table')
+    df2 = pd.read_html(str(table2))[0]
+    
+    st.dataframe(df2, use_container_width=True, hide_index=True)
+    
+    
 if wilayah == 'Cianjur':
     url = 'https://referensi.data.kemdikbud.go.id/pendidikan/dikmas/020700/2'
     response = requests.get(url)
@@ -76,7 +110,24 @@ if wilayah == 'Cianjur':
     df = pd.read_html(str(table))[0]
     
     st.dataframe(df, use_container_width=True, hide_index=True)
+    
+    st.subheader("", divider='orange')
+    
+    data = pd.read_csv('data/dikdas/3203kodedikbud.csv', dtype={'kodekec':'str'})
+    kecterpilih = st.selectbox('Pilih Kecamatan', data['namakec'], key='kec01')
+    kodeterpilih = data.loc[data['namakec'] == kecterpilih, 'kodekec'].values[0]
+    
+    url2 = f'https://referensi.data.kemdikbud.go.id/pendidikan/dikmas/0207{kodeterpilih}/3'
+    response2 = requests.get(url2)
+    soup2 = BeautifulSoup(response2.content, 'html.parser')
 
+    # Temukan tabel dalam HTML
+    table2 = soup2.find('table')
+    df2 = pd.read_html(str(table2))[0]
+    
+    st.dataframe(df2, use_container_width=True, hide_index=True)
+    
+    
 if wilayah == 'Bandung': 
     url = 'https://referensi.data.kemdikbud.go.id/pendidikan/dikmas/020800/2'
     response = requests.get(url)
@@ -87,6 +138,23 @@ if wilayah == 'Bandung':
     df = pd.read_html(str(table))[0]
     
     st.dataframe(df, use_container_width=True, hide_index=True)
+    
+    st.subheader("", divider='orange')
+    
+    data = pd.read_csv('data/dikdas/3204kodedikbud.csv', dtype={'kodekec':'str'})
+    kecterpilih = st.selectbox('Pilih Kecamatan', data['namakec'], key='kec01')
+    kodeterpilih = data.loc[data['namakec'] == kecterpilih, 'kodekec'].values[0]
+    
+    url2 = f'https://referensi.data.kemdikbud.go.id/pendidikan/dikmas/0208{kodeterpilih}/3'
+    response2 = requests.get(url2)
+    soup2 = BeautifulSoup(response2.content, 'html.parser')
+
+    # Temukan tabel dalam HTML
+    table2 = soup2.find('table')
+    df2 = pd.read_html(str(table2))[0]
+    
+    st.dataframe(df2, use_container_width=True, hide_index=True)
+    
 
 if wilayah == 'Garut':
     url = 'https://referensi.data.kemdikbud.go.id/pendidikan/dikmas/021100/2'
@@ -99,6 +167,23 @@ if wilayah == 'Garut':
     
     st.dataframe(df, use_container_width=True, hide_index=True)
     
+    st.subheader("", divider='orange')
+    
+    data = pd.read_csv('data/dikdas/3205kodedikbud.csv', dtype={'kodekec':'str'})
+    kecterpilih = st.selectbox('Pilih Kecamatan', data['namakec'], key='kec01')
+    kodeterpilih = data.loc[data['namakec'] == kecterpilih, 'kodekec'].values[0]
+    
+    url2 = f'https://referensi.data.kemdikbud.go.id/pendidikan/dikmas/0211{kodeterpilih}/3'
+    response2 = requests.get(url2)
+    soup2 = BeautifulSoup(response2.content, 'html.parser')
+
+    # Temukan tabel dalam HTML
+    table2 = soup2.find('table')
+    df2 = pd.read_html(str(table2))[0]
+    
+    st.dataframe(df2, use_container_width=True, hide_index=True)
+    
+    
 if wilayah == 'Tasikmalaya':
     url = 'https://referensi.data.kemdikbud.go.id/pendidikan/dikmas/021200/2'
     response = requests.get(url)
@@ -109,6 +194,23 @@ if wilayah == 'Tasikmalaya':
     df = pd.read_html(str(table))[0]
     
     st.dataframe(df, use_container_width=True, hide_index=True)
+    
+    st.subheader("", divider='orange')
+    
+    data = pd.read_csv('data/dikdas/3206kodedikbud.csv', dtype={'kodekec':'str'})
+    kecterpilih = st.selectbox('Pilih Kecamatan', data['namakec'], key='kec01')
+    kodeterpilih = data.loc[data['namakec'] == kecterpilih, 'kodekec'].values[0]
+    
+    url2 = f'https://referensi.data.kemdikbud.go.id/pendidikan/dikmas/0212{kodeterpilih}/3'
+    response2 = requests.get(url2)
+    soup2 = BeautifulSoup(response2.content, 'html.parser')
+
+    # Temukan tabel dalam HTML
+    table2 = soup2.find('table')
+    df2 = pd.read_html(str(table2))[0]
+    
+    st.dataframe(df2, use_container_width=True, hide_index=True)
+    
     
 if wilayah == 'Ciamis':
     url = 'https://referensi.data.kemdikbud.go.id/pendidikan/dikmas/021400/2'
@@ -121,6 +223,23 @@ if wilayah == 'Ciamis':
     
     st.dataframe(df, use_container_width=True, hide_index=True)
     
+    st.subheader("", divider='orange')
+    
+    data = pd.read_csv('data/dikdas/3207kodedikbud.csv', dtype={'kodekec':'str'})
+    kecterpilih = st.selectbox('Pilih Kecamatan', data['namakec'], key='kec01')
+    kodeterpilih = data.loc[data['namakec'] == kecterpilih, 'kodekec'].values[0]
+    
+    url2 = f'https://referensi.data.kemdikbud.go.id/pendidikan/dikmas/0214{kodeterpilih}/3'
+    response2 = requests.get(url2)
+    soup2 = BeautifulSoup(response2.content, 'html.parser')
+
+    # Temukan tabel dalam HTML
+    table2 = soup2.find('table')
+    df2 = pd.read_html(str(table2))[0]
+    
+    st.dataframe(df2, use_container_width=True, hide_index=True)
+    
+    
 if wilayah == 'Kuningan':
     url = 'https://referensi.data.kemdikbud.go.id/pendidikan/dikmas/021500/2'
     response = requests.get(url)
@@ -131,6 +250,23 @@ if wilayah == 'Kuningan':
     df = pd.read_html(str(table))[0]
     
     st.dataframe(df, use_container_width=True, hide_index=True)
+    
+    st.subheader("", divider='orange')
+    
+    data = pd.read_csv('data/dikdas/3208kodedikbud.csv', dtype={'kodekec':'str'})
+    kecterpilih = st.selectbox('Pilih Kecamatan', data['namakec'], key='kec01')
+    kodeterpilih = data.loc[data['namakec'] == kecterpilih, 'kodekec'].values[0]
+    
+    url2 = f'https://referensi.data.kemdikbud.go.id/pendidikan/dikmas/0215{kodeterpilih}/3'
+    response2 = requests.get(url2)
+    soup2 = BeautifulSoup(response2.content, 'html.parser')
+
+    # Temukan tabel dalam HTML
+    table2 = soup2.find('table')
+    df2 = pd.read_html(str(table2))[0]
+    
+    st.dataframe(df2, use_container_width=True, hide_index=True)
+    
 
 if wilayah == 'Cirebon':
     url = 'https://referensi.data.kemdikbud.go.id/pendidikan/dikmas/021700/2'
@@ -142,6 +278,23 @@ if wilayah == 'Cirebon':
     df = pd.read_html(str(table))[0]
     
     st.dataframe(df, use_container_width=True, hide_index=True)
+    
+    st.subheader("", divider='orange')
+    
+    data = pd.read_csv('data/dikdas/3209kodedikbud.csv', dtype={'kodekec':'str'})
+    kecterpilih = st.selectbox('Pilih Kecamatan', data['namakec'], key='kec01')
+    kodeterpilih = data.loc[data['namakec'] == kecterpilih, 'kodekec'].values[0]
+    
+    url2 = f'https://referensi.data.kemdikbud.go.id/pendidikan/dikmas/0217{kodeterpilih}/3'
+    response2 = requests.get(url2)
+    soup2 = BeautifulSoup(response2.content, 'html.parser')
+
+    # Temukan tabel dalam HTML
+    table2 = soup2.find('table')
+    df2 = pd.read_html(str(table2))[0]
+    
+    st.dataframe(df2, use_container_width=True, hide_index=True)
+    
 
 if wilayah == 'Majalengka':
     url = 'https://referensi.data.kemdikbud.go.id/pendidikan/dikmas/021600/2'
@@ -153,6 +306,23 @@ if wilayah == 'Majalengka':
     df = pd.read_html(str(table))[0]
     
     st.dataframe(df, use_container_width=True, hide_index=True)
+    
+    st.subheader("", divider='orange')
+    
+    data = pd.read_csv('data/dikdas/3210kodedikbud.csv', dtype={'kodekec':'str'})
+    kecterpilih = st.selectbox('Pilih Kecamatan', data['namakec'], key='kec01')
+    kodeterpilih = data.loc[data['namakec'] == kecterpilih, 'kodekec'].values[0]
+    
+    url2 = f'https://referensi.data.kemdikbud.go.id/pendidikan/dikmas/0216{kodeterpilih}/3'
+    response2 = requests.get(url2)
+    soup2 = BeautifulSoup(response2.content, 'html.parser')
+
+    # Temukan tabel dalam HTML
+    table2 = soup2.find('table')
+    df2 = pd.read_html(str(table2))[0]
+    
+    st.dataframe(df2, use_container_width=True, hide_index=True)
+    
 
 if wilayah == 'Sumedang':
     url = 'https://referensi.data.kemdikbud.go.id/pendidikan/dikmas/021000/2'
@@ -164,6 +334,23 @@ if wilayah == 'Sumedang':
     df = pd.read_html(str(table))[0]
     
     st.dataframe(df, use_container_width=True, hide_index=True)
+    
+    st.subheader("", divider='orange')
+    
+    data = pd.read_csv('data/dikdas/3211kodedikbud.csv', dtype={'kodekec':'str'})
+    kecterpilih = st.selectbox('Pilih Kecamatan', data['namakec'], key='kec01')
+    kodeterpilih = data.loc[data['namakec'] == kecterpilih, 'kodekec'].values[0]
+    
+    url2 = f'https://referensi.data.kemdikbud.go.id/pendidikan/dikmas/0210{kodeterpilih}/3'
+    response2 = requests.get(url2)
+    soup2 = BeautifulSoup(response2.content, 'html.parser')
+
+    # Temukan tabel dalam HTML
+    table2 = soup2.find('table')
+    df2 = pd.read_html(str(table2))[0]
+    
+    st.dataframe(df2, use_container_width=True, hide_index=True)
+    
 
 if wilayah == 'Indramayu':
     url = 'https://referensi.data.kemdikbud.go.id/pendidikan/dikmas/021800/2'
@@ -175,6 +362,23 @@ if wilayah == 'Indramayu':
     df = pd.read_html(str(table))[0]
     
     st.dataframe(df, use_container_width=True, hide_index=True)
+    
+    st.subheader("", divider='orange')
+    
+    data = pd.read_csv('data/dikdas/3212kodedikbud.csv', dtype={'kodekec':'str'})
+    kecterpilih = st.selectbox('Pilih Kecamatan', data['namakec'], key='kec01')
+    kodeterpilih = data.loc[data['namakec'] == kecterpilih, 'kodekec'].values[0]
+    
+    url2 = f'https://referensi.data.kemdikbud.go.id/pendidikan/dikmas/0218{kodeterpilih}/3'
+    response2 = requests.get(url2)
+    soup2 = BeautifulSoup(response2.content, 'html.parser')
+
+    # Temukan tabel dalam HTML
+    table2 = soup2.find('table')
+    df2 = pd.read_html(str(table2))[0]
+    
+    st.dataframe(df2, use_container_width=True, hide_index=True)
+    
 
 if wilayah == 'Subang':
     url = 'https://referensi.data.kemdikbud.go.id/pendidikan/dikmas/021900/2'
@@ -186,6 +390,23 @@ if wilayah == 'Subang':
     df = pd.read_html(str(table))[0]
     
     st.dataframe(df, use_container_width=True, hide_index=True)
+    
+    st.subheader("", divider='orange')
+    
+    data = pd.read_csv('data/dikdas/3213kodedikbud.csv', dtype={'kodekec':'str'})
+    kecterpilih = st.selectbox('Pilih Kecamatan', data['namakec'], key='kec01')
+    kodeterpilih = data.loc[data['namakec'] == kecterpilih, 'kodekec'].values[0]
+    
+    url2 = f'https://referensi.data.kemdikbud.go.id/pendidikan/dikmas/0219{kodeterpilih}/3'
+    response2 = requests.get(url2)
+    soup2 = BeautifulSoup(response2.content, 'html.parser')
+
+    # Temukan tabel dalam HTML
+    table2 = soup2.find('table')
+    df2 = pd.read_html(str(table2))[0]
+    
+    st.dataframe(df2, use_container_width=True, hide_index=True)
+    
 
 if wilayah == 'Purwakarta':
     url = 'https://referensi.data.kemdikbud.go.id/pendidikan/dikmas/022000/2'
@@ -197,6 +418,23 @@ if wilayah == 'Purwakarta':
     df = pd.read_html(str(table))[0]
     
     st.dataframe(df, use_container_width=True, hide_index=True)
+    
+    st.subheader("", divider='orange')
+    
+    data = pd.read_csv('data/dikdas/3214kodedikbud.csv', dtype={'kodekec':'str'})
+    kecterpilih = st.selectbox('Pilih Kecamatan', data['namakec'], key='kec01')
+    kodeterpilih = data.loc[data['namakec'] == kecterpilih, 'kodekec'].values[0]
+    
+    url2 = f'https://referensi.data.kemdikbud.go.id/pendidikan/dikmas/0220{kodeterpilih}/3'
+    response2 = requests.get(url2)
+    soup2 = BeautifulSoup(response2.content, 'html.parser')
+
+    # Temukan tabel dalam HTML
+    table2 = soup2.find('table')
+    df2 = pd.read_html(str(table2))[0]
+    
+    st.dataframe(df2, use_container_width=True, hide_index=True)
+    
 
 if wilayah == 'Karawang':
     url = 'https://referensi.data.kemdikbud.go.id/pendidikan/dikmas/022100/2'
@@ -208,6 +446,23 @@ if wilayah == 'Karawang':
     df = pd.read_html(str(table))[0]
     
     st.dataframe(df, use_container_width=True, hide_index=True)
+    
+    st.subheader("", divider='orange')
+    
+    data = pd.read_csv('data/dikdas/3215kodedikbud.csv', dtype={'kodekec':'str'})
+    kecterpilih = st.selectbox('Pilih Kecamatan', data['namakec'], key='kec01')
+    kodeterpilih = data.loc[data['namakec'] == kecterpilih, 'kodekec'].values[0]
+    
+    url2 = f'https://referensi.data.kemdikbud.go.id/pendidikan/dikmas/0221{kodeterpilih}/3'
+    response2 = requests.get(url2)
+    soup2 = BeautifulSoup(response2.content, 'html.parser')
+
+    # Temukan tabel dalam HTML
+    table2 = soup2.find('table')
+    df2 = pd.read_html(str(table2))[0]
+    
+    st.dataframe(df2, use_container_width=True, hide_index=True)
+    
 
 if wilayah == 'Bekasi':
     url = 'https://referensi.data.kemdikbud.go.id/pendidikan/dikmas/022200/2'
@@ -219,6 +474,23 @@ if wilayah == 'Bekasi':
     df = pd.read_html(str(table))[0]
     
     st.dataframe(df, use_container_width=True, hide_index=True)
+    
+    st.subheader("", divider='orange')
+    
+    data = pd.read_csv('data/dikdas/3216kodedikbud.csv', dtype={'kodekec':'str'})
+    kecterpilih = st.selectbox('Pilih Kecamatan', data['namakec'], key='kec01')
+    kodeterpilih = data.loc[data['namakec'] == kecterpilih, 'kodekec'].values[0]
+    
+    url2 = f'https://referensi.data.kemdikbud.go.id/pendidikan/dikmas/0222{kodeterpilih}/3'
+    response2 = requests.get(url2)
+    soup2 = BeautifulSoup(response2.content, 'html.parser')
+
+    # Temukan tabel dalam HTML
+    table2 = soup2.find('table')
+    df2 = pd.read_html(str(table2))[0]
+    
+    st.dataframe(df2, use_container_width=True, hide_index=True)
+    
 
 if wilayah == 'Bandung Barat':
     url = 'https://referensi.data.kemdikbud.go.id/pendidikan/dikmas/022300/2'
@@ -230,6 +502,23 @@ if wilayah == 'Bandung Barat':
     df = pd.read_html(str(table))[0]
     
     st.dataframe(df, use_container_width=True, hide_index=True)
+    
+    st.subheader("", divider='orange')
+    
+    data = pd.read_csv('data/dikdas/3217kodedikbud.csv', dtype={'kodekec':'str'})
+    kecterpilih = st.selectbox('Pilih Kecamatan', data['namakec'], key='kec01')
+    kodeterpilih = data.loc[data['namakec'] == kecterpilih, 'kodekec'].values[0]
+    
+    url2 = f'https://referensi.data.kemdikbud.go.id/pendidikan/dikmas/0223{kodeterpilih}/3'
+    response2 = requests.get(url2)
+    soup2 = BeautifulSoup(response2.content, 'html.parser')
+
+    # Temukan tabel dalam HTML
+    table2 = soup2.find('table')
+    df2 = pd.read_html(str(table2))[0]
+    
+    st.dataframe(df2, use_container_width=True, hide_index=True)
+    
 
 if wilayah == 'Pangandaran':
     url = 'https://referensi.data.kemdikbud.go.id/pendidikan/dikmas/022500/2'
@@ -241,6 +530,23 @@ if wilayah == 'Pangandaran':
     df = pd.read_html(str(table))[0]
     
     st.dataframe(df, use_container_width=True, hide_index=True)
+    
+    st.subheader("", divider='orange')
+    
+    data = pd.read_csv('data/dikdas/3218kodedikbud.csv', dtype={'kodekec':'str'})
+    kecterpilih = st.selectbox('Pilih Kecamatan', data['namakec'], key='kec01')
+    kodeterpilih = data.loc[data['namakec'] == kecterpilih, 'kodekec'].values[0]
+    
+    url2 = f'https://referensi.data.kemdikbud.go.id/pendidikan/dikmas/0225{kodeterpilih}/3'
+    response2 = requests.get(url2)
+    soup2 = BeautifulSoup(response2.content, 'html.parser')
+
+    # Temukan tabel dalam HTML
+    table2 = soup2.find('table')
+    df2 = pd.read_html(str(table2))[0]
+    
+    st.dataframe(df2, use_container_width=True, hide_index=True)
+    
 
 if wilayah == 'Kota Bogor':
     url = 'https://referensi.data.kemdikbud.go.id/pendidikan/dikmas/026100/2'
@@ -252,6 +558,23 @@ if wilayah == 'Kota Bogor':
     df = pd.read_html(str(table))[0]
     
     st.dataframe(df, use_container_width=True, hide_index=True)
+    
+    st.subheader("", divider='orange')
+    
+    data = pd.read_csv('data/dikdas/3271kodedikbud.csv', dtype={'kodekec':'str'})
+    kecterpilih = st.selectbox('Pilih Kecamatan', data['namakec'], key='kec01')
+    kodeterpilih = data.loc[data['namakec'] == kecterpilih, 'kodekec'].values[0]
+    
+    url2 = f'https://referensi.data.kemdikbud.go.id/pendidikan/dikmas/0261{kodeterpilih}/3'
+    response2 = requests.get(url2)
+    soup2 = BeautifulSoup(response2.content, 'html.parser')
+
+    # Temukan tabel dalam HTML
+    table2 = soup2.find('table')
+    df2 = pd.read_html(str(table2))[0]
+    
+    st.dataframe(df2, use_container_width=True, hide_index=True)
+    
 
 if wilayah == 'Kota Sukabumi':
     url = 'https://referensi.data.kemdikbud.go.id/pendidikan/dikmas/026200/2'
@@ -263,6 +586,23 @@ if wilayah == 'Kota Sukabumi':
     df = pd.read_html(str(table))[0]
     
     st.dataframe(df, use_container_width=True, hide_index=True)
+    
+    st.subheader("", divider='orange')
+    
+    data = pd.read_csv('data/dikdas/3272kodedikbud.csv', dtype={'kodekec':'str'})
+    kecterpilih = st.selectbox('Pilih Kecamatan', data['namakec'], key='kec01')
+    kodeterpilih = data.loc[data['namakec'] == kecterpilih, 'kodekec'].values[0]
+    
+    url2 = f'https://referensi.data.kemdikbud.go.id/pendidikan/dikmas/0262{kodeterpilih}/3'
+    response2 = requests.get(url2)
+    soup2 = BeautifulSoup(response2.content, 'html.parser')
+
+    # Temukan tabel dalam HTML
+    table2 = soup2.find('table')
+    df2 = pd.read_html(str(table2))[0]
+    
+    st.dataframe(df2, use_container_width=True, hide_index=True)
+    
 
 if wilayah == 'Kota Bandung':
     url = 'https://referensi.data.kemdikbud.go.id/pendidikan/dikmas/026000/2'
@@ -275,6 +615,23 @@ if wilayah == 'Kota Bandung':
     
     st.dataframe(df, use_container_width=True, hide_index=True)
     
+    st.subheader("", divider='orange')
+    
+    data = pd.read_csv('data/dikdas/3273kodedikbud.csv', dtype={'kodekec':'str'})
+    kecterpilih = st.selectbox('Pilih Kecamatan', data['namakec'], key='kec01')
+    kodeterpilih = data.loc[data['namakec'] == kecterpilih, 'kodekec'].values[0]
+    
+    url2 = f'https://referensi.data.kemdikbud.go.id/pendidikan/dikmas/0260{kodeterpilih}/3'
+    response2 = requests.get(url2)
+    soup2 = BeautifulSoup(response2.content, 'html.parser')
+
+    # Temukan tabel dalam HTML
+    table2 = soup2.find('table')
+    df2 = pd.read_html(str(table2))[0]
+    
+    st.dataframe(df2, use_container_width=True, hide_index=True)
+    
+    
 if wilayah == 'Kota Cirebon':
     url = 'https://referensi.data.kemdikbud.go.id/pendidikan/dikmas/026300/2'
     response = requests.get(url)
@@ -286,6 +643,23 @@ if wilayah == 'Kota Cirebon':
     
     st.dataframe(df, use_container_width=True, hide_index=True)
     
+    st.subheader("", divider='orange')
+    
+    data = pd.read_csv('data/dikdas/3274kodedikbud.csv', dtype={'kodekec':'str'})
+    kecterpilih = st.selectbox('Pilih Kecamatan', data['namakec'], key='kec01')
+    kodeterpilih = data.loc[data['namakec'] == kecterpilih, 'kodekec'].values[0]
+    
+    url2 = f'https://referensi.data.kemdikbud.go.id/pendidikan/dikmas/0263{kodeterpilih}/3'
+    response2 = requests.get(url2)
+    soup2 = BeautifulSoup(response2.content, 'html.parser')
+
+    # Temukan tabel dalam HTML
+    table2 = soup2.find('table')
+    df2 = pd.read_html(str(table2))[0]
+    
+    st.dataframe(df2, use_container_width=True, hide_index=True)
+    
+    
 if wilayah == 'Kota Bekasi':
     url = 'https://referensi.data.kemdikbud.go.id/pendidikan/dikmas/026500/2'
     response = requests.get(url)
@@ -296,6 +670,23 @@ if wilayah == 'Kota Bekasi':
     df = pd.read_html(str(table))[0]
     
     st.dataframe(df, use_container_width=True, hide_index=True)
+    
+    st.subheader("", divider='orange')
+    
+    data = pd.read_csv('data/dikdas/3275kodedikbud.csv', dtype={'kodekec':'str'})
+    kecterpilih = st.selectbox('Pilih Kecamatan', data['namakec'], key='kec01')
+    kodeterpilih = data.loc[data['namakec'] == kecterpilih, 'kodekec'].values[0]
+    
+    url2 = f'https://referensi.data.kemdikbud.go.id/pendidikan/dikmas/0265{kodeterpilih}/3'
+    response2 = requests.get(url2)
+    soup2 = BeautifulSoup(response2.content, 'html.parser')
+
+    # Temukan tabel dalam HTML
+    table2 = soup2.find('table')
+    df2 = pd.read_html(str(table2))[0]
+    
+    st.dataframe(df2, use_container_width=True, hide_index=True)
+    
 
 if wilayah == 'Kota Depok':
     url = 'https://referensi.data.kemdikbud.go.id/pendidikan/dikmas/026600/2'
@@ -307,6 +698,23 @@ if wilayah == 'Kota Depok':
     df = pd.read_html(str(table))[0]
     
     st.dataframe(df, use_container_width=True, hide_index=True)
+    
+    st.subheader("", divider='orange')
+    
+    data = pd.read_csv('data/dikdas/3276kodedikbud.csv', dtype={'kodekec':'str'})
+    kecterpilih = st.selectbox('Pilih Kecamatan', data['namakec'], key='kec01')
+    kodeterpilih = data.loc[data['namakec'] == kecterpilih, 'kodekec'].values[0]
+    
+    url2 = f'https://referensi.data.kemdikbud.go.id/pendidikan/dikmas/0266{kodeterpilih}/3'
+    response2 = requests.get(url2)
+    soup2 = BeautifulSoup(response2.content, 'html.parser')
+
+    # Temukan tabel dalam HTML
+    table2 = soup2.find('table')
+    df2 = pd.read_html(str(table2))[0]
+    
+    st.dataframe(df2, use_container_width=True, hide_index=True)
+    
 
 if wilayah == 'Kota Cimahi':
     url = 'https://referensi.data.kemdikbud.go.id/pendidikan/dikmas/026700/2'
@@ -318,6 +726,23 @@ if wilayah == 'Kota Cimahi':
     df = pd.read_html(str(table))[0]
     
     st.dataframe(df, use_container_width=True, hide_index=True)
+    
+    st.subheader("", divider='orange')
+    
+    data = pd.read_csv('data/dikdas/3277kodedikbud.csv', dtype={'kodekec':'str'})
+    kecterpilih = st.selectbox('Pilih Kecamatan', data['namakec'], key='kec01')
+    kodeterpilih = data.loc[data['namakec'] == kecterpilih, 'kodekec'].values[0]
+    
+    url2 = f'https://referensi.data.kemdikbud.go.id/pendidikan/dikmas/0267{kodeterpilih}/3'
+    response2 = requests.get(url2)
+    soup2 = BeautifulSoup(response2.content, 'html.parser')
+
+    # Temukan tabel dalam HTML
+    table2 = soup2.find('table')
+    df2 = pd.read_html(str(table2))[0]
+    
+    st.dataframe(df2, use_container_width=True, hide_index=True)
+    
 
 if wilayah == 'Kota Tasikmalaya':
     url = 'https://referensi.data.kemdikbud.go.id/pendidikan/dikmas/026800/2'
@@ -329,6 +754,23 @@ if wilayah == 'Kota Tasikmalaya':
     df = pd.read_html(str(table))[0]
     
     st.dataframe(df, use_container_width=True, hide_index=True)
+    
+    st.subheader("", divider='orange')
+    
+    data = pd.read_csv('data/dikdas/3278kodedikbud.csv', dtype={'kodekec':'str'})
+    kecterpilih = st.selectbox('Pilih Kecamatan', data['namakec'], key='kec01')
+    kodeterpilih = data.loc[data['namakec'] == kecterpilih, 'kodekec'].values[0]
+    
+    url2 = f'https://referensi.data.kemdikbud.go.id/pendidikan/dikmas/0268{kodeterpilih}/3'
+    response2 = requests.get(url2)
+    soup2 = BeautifulSoup(response2.content, 'html.parser')
+
+    # Temukan tabel dalam HTML
+    table2 = soup2.find('table')
+    df2 = pd.read_html(str(table2))[0]
+    
+    st.dataframe(df2, use_container_width=True, hide_index=True)
+    
 
 if wilayah == 'Kota Banjar':
     url = 'https://referensi.data.kemdikbud.go.id/pendidikan/dikmas/026900/2'
@@ -340,3 +782,20 @@ if wilayah == 'Kota Banjar':
     df = pd.read_html(str(table))[0]
     
     st.dataframe(df, use_container_width=True, hide_index=True)
+    
+    st.subheader("", divider='orange')
+    
+    data = pd.read_csv('data/dikdas/3279kodedikbud.csv', dtype={'kodekec':'str'})
+    kecterpilih = st.selectbox('Pilih Kecamatan', data['namakec'], key='kec01')
+    kodeterpilih = data.loc[data['namakec'] == kecterpilih, 'kodekec'].values[0]
+    
+    url2 = f'https://referensi.data.kemdikbud.go.id/pendidikan/dikmas/0269{kodeterpilih}/3'
+    response2 = requests.get(url2)
+    soup2 = BeautifulSoup(response2.content, 'html.parser')
+
+    # Temukan tabel dalam HTML
+    table2 = soup2.find('table')
+    df2 = pd.read_html(str(table2))[0]
+    
+    st.dataframe(df2, use_container_width=True, hide_index=True)
+    

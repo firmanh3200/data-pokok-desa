@@ -21,8 +21,17 @@ with st.container(border=True):
     df = pd.read_html(str(table))[0]
     
     st.dataframe(df, use_container_width=True, hide_index=True)
+st.subheader("", divider='green')
 
-with st.expander("Jawa Barat"):
+pilihan = ['Jawa Barat', 'Bogor', 'Sukabumi', 'Cianjur', 'Bandung', 'Garut', 'Tasikmalaya', 'Ciamis',
+           'Kuningan', 'Cirebon', 'Majalengka', 'Sumedang', 'Indramayu', 'Subang', 'Purwakarta',
+           'Karawang', 'Bekasi', 'Bandung Barat', 'Pangandaran', 'Kota Bogor', 'Kota Sukabumi',
+           'Kota Bandung', 'Kota Cirebon', 'Kota Bekasi', 'Kota Depok', 'Kota Cimahi',
+           'Kota Tasikmalaya', 'Kota Banjar']
+
+wilayah = st.selectbox("Pilih Wilayah", pilihan, key='pilihan')
+
+if wilayah == 'Jawa Barat':
     # Ambil data dari URL
     url = 'https://referensi.data.kemdikbud.go.id/pendidikan/yayasan/020000/1'
     response = requests.get(url)
@@ -35,8 +44,7 @@ with st.expander("Jawa Barat"):
     st.dataframe(df, use_container_width=True, hide_index=True)
 
 
-with st.expander("Kabupaten Bogor"):
-    # Ambil data dari URL
+if wilayah == 'Bogor':
     url = 'https://referensi.data.kemdikbud.go.id/pendidikan/yayasan/020500/2'
     response = requests.get(url)
     soup = BeautifulSoup(response.content, 'html.parser')
@@ -47,8 +55,7 @@ with st.expander("Kabupaten Bogor"):
     
     st.dataframe(df, use_container_width=True, hide_index=True)
 
-with st.expander("Kabupaten Sukabumi"):
-    # Ambil data dari URL
+if wilayah == 'Sukabumi':
     url = 'https://referensi.data.kemdikbud.go.id/pendidikan/yayasan/020600/2'
     response = requests.get(url)
     soup = BeautifulSoup(response.content, 'html.parser')
@@ -59,8 +66,7 @@ with st.expander("Kabupaten Sukabumi"):
     
     st.dataframe(df, use_container_width=True, hide_index=True)
     
-with st.expander("Kabupaten Cianjur"):
-    # Ambil data dari URL
+if wilayah == 'Cianjur':
     url = 'https://referensi.data.kemdikbud.go.id/pendidikan/yayasan/020700/2'
     response = requests.get(url)
     soup = BeautifulSoup(response.content, 'html.parser')
@@ -71,8 +77,7 @@ with st.expander("Kabupaten Cianjur"):
     
     st.dataframe(df, use_container_width=True, hide_index=True)
     
-with st.expander("Kabupaten Bandung"):
-    # Ambil data dari URL
+if wilayah == 'Bandung': 
     url = 'https://referensi.data.kemdikbud.go.id/pendidikan/yayasan/020800/2'
     response = requests.get(url)
     soup = BeautifulSoup(response.content, 'html.parser')
@@ -83,8 +88,7 @@ with st.expander("Kabupaten Bandung"):
     
     st.dataframe(df, use_container_width=True, hide_index=True)
 
-with st.expander("Kabupaten Garut"):
-    # Ambil data dari URL
+if wilayah == 'Garut':
     url = 'https://referensi.data.kemdikbud.go.id/pendidikan/yayasan/021100/2'
     response = requests.get(url)
     soup = BeautifulSoup(response.content, 'html.parser')
@@ -95,8 +99,7 @@ with st.expander("Kabupaten Garut"):
     
     st.dataframe(df, use_container_width=True, hide_index=True)
     
-with st.expander("Kabupaten Tasikmalaya"):
-    # Ambil data dari URL
+if wilayah == 'Tasikmalaya':
     url = 'https://referensi.data.kemdikbud.go.id/pendidikan/yayasan/021200/2'
     response = requests.get(url)
     soup = BeautifulSoup(response.content, 'html.parser')
@@ -107,8 +110,7 @@ with st.expander("Kabupaten Tasikmalaya"):
     
     st.dataframe(df, use_container_width=True, hide_index=True)
     
-with st.expander("Kabupaten Ciamis"):
-    # Ambil data dari URL
+if wilayah == 'Ciamis':
     url = 'https://referensi.data.kemdikbud.go.id/pendidikan/yayasan/021400/2'
     response = requests.get(url)
     soup = BeautifulSoup(response.content, 'html.parser')
@@ -119,8 +121,7 @@ with st.expander("Kabupaten Ciamis"):
     
     st.dataframe(df, use_container_width=True, hide_index=True)
     
-with st.expander("Kabupaten Kuningan"):
-    # Ambil data dari URL
+if wilayah == 'Kuningan':
     url = 'https://referensi.data.kemdikbud.go.id/pendidikan/yayasan/021500/2'
     response = requests.get(url)
     soup = BeautifulSoup(response.content, 'html.parser')
@@ -131,8 +132,7 @@ with st.expander("Kabupaten Kuningan"):
     
     st.dataframe(df, use_container_width=True, hide_index=True)
 
-with st.expander("Kabupaten Cirebon"):
-    # Ambil data dari URL
+if wilayah == 'Cirebon':
     url = 'https://referensi.data.kemdikbud.go.id/pendidikan/yayasan/021700/2'
     response = requests.get(url)
     soup = BeautifulSoup(response.content, 'html.parser')
@@ -143,8 +143,7 @@ with st.expander("Kabupaten Cirebon"):
     
     st.dataframe(df, use_container_width=True, hide_index=True)
 
-with st.expander("Kabupaten Majalengka"):
-    # Ambil data dari URL
+if wilayah == 'Majalengka':
     url = 'https://referensi.data.kemdikbud.go.id/pendidikan/yayasan/021600/2'
     response = requests.get(url)
     soup = BeautifulSoup(response.content, 'html.parser')
@@ -155,8 +154,7 @@ with st.expander("Kabupaten Majalengka"):
     
     st.dataframe(df, use_container_width=True, hide_index=True)
 
-with st.expander("Kabupaten Sumedang"):
-    # Ambil data dari URL
+if wilayah == 'Sumedang':
     url = 'https://referensi.data.kemdikbud.go.id/pendidikan/yayasan/021000/2'
     response = requests.get(url)
     soup = BeautifulSoup(response.content, 'html.parser')
@@ -167,8 +165,7 @@ with st.expander("Kabupaten Sumedang"):
     
     st.dataframe(df, use_container_width=True, hide_index=True)
 
-with st.expander("Kabupaten Indramayu"):
-    # Ambil data dari URL
+if wilayah == 'Indramayu':
     url = 'https://referensi.data.kemdikbud.go.id/pendidikan/yayasan/021800/2'
     response = requests.get(url)
     soup = BeautifulSoup(response.content, 'html.parser')
@@ -179,8 +176,7 @@ with st.expander("Kabupaten Indramayu"):
     
     st.dataframe(df, use_container_width=True, hide_index=True)
 
-with st.expander("Kabupaten Subang"):
-    # Ambil data dari URL
+if wilayah == 'Subang':
     url = 'https://referensi.data.kemdikbud.go.id/pendidikan/yayasan/021900/2'
     response = requests.get(url)
     soup = BeautifulSoup(response.content, 'html.parser')
@@ -191,8 +187,7 @@ with st.expander("Kabupaten Subang"):
     
     st.dataframe(df, use_container_width=True, hide_index=True)
 
-with st.expander("Kabupaten Purwakarta"):
-    # Ambil data dari URL
+if wilayah == 'Purwakarta':
     url = 'https://referensi.data.kemdikbud.go.id/pendidikan/yayasan/022000/2'
     response = requests.get(url)
     soup = BeautifulSoup(response.content, 'html.parser')
@@ -203,8 +198,7 @@ with st.expander("Kabupaten Purwakarta"):
     
     st.dataframe(df, use_container_width=True, hide_index=True)
 
-with st.expander("Kabupaten Karawang"):
-    # Ambil data dari URL
+if wilayah == 'Karawang':
     url = 'https://referensi.data.kemdikbud.go.id/pendidikan/yayasan/022100/2'
     response = requests.get(url)
     soup = BeautifulSoup(response.content, 'html.parser')
@@ -215,8 +209,7 @@ with st.expander("Kabupaten Karawang"):
     
     st.dataframe(df, use_container_width=True, hide_index=True)
 
-with st.expander("Kabupaten Bekasi"):
-    # Ambil data dari URL
+if wilayah == 'Bekasi':
     url = 'https://referensi.data.kemdikbud.go.id/pendidikan/yayasan/022200/2'
     response = requests.get(url)
     soup = BeautifulSoup(response.content, 'html.parser')
@@ -227,8 +220,7 @@ with st.expander("Kabupaten Bekasi"):
     
     st.dataframe(df, use_container_width=True, hide_index=True)
 
-with st.expander("Kabupaten Bandung Barat"):
-    # Ambil data dari URL
+if wilayah == 'Bandung Barat':
     url = 'https://referensi.data.kemdikbud.go.id/pendidikan/yayasan/022300/2'
     response = requests.get(url)
     soup = BeautifulSoup(response.content, 'html.parser')
@@ -239,8 +231,7 @@ with st.expander("Kabupaten Bandung Barat"):
     
     st.dataframe(df, use_container_width=True, hide_index=True)
 
-with st.expander("Kabupaten Pangandaran"):
-    # Ambil data dari URL
+if wilayah == 'Pangandaran':
     url = 'https://referensi.data.kemdikbud.go.id/pendidikan/yayasan/022500/2'
     response = requests.get(url)
     soup = BeautifulSoup(response.content, 'html.parser')
@@ -251,8 +242,7 @@ with st.expander("Kabupaten Pangandaran"):
     
     st.dataframe(df, use_container_width=True, hide_index=True)
 
-with st.expander("Kota Bogor"):
-    # Ambil data dari URL
+if wilayah == 'Kota Bogor':
     url = 'https://referensi.data.kemdikbud.go.id/pendidikan/yayasan/026100/2'
     response = requests.get(url)
     soup = BeautifulSoup(response.content, 'html.parser')
@@ -263,8 +253,7 @@ with st.expander("Kota Bogor"):
     
     st.dataframe(df, use_container_width=True, hide_index=True)
 
-with st.expander("Kota Sukabumi"):
-    # Ambil data dari URL
+if wilayah == 'Kota Sukabumi':
     url = 'https://referensi.data.kemdikbud.go.id/pendidikan/yayasan/026200/2'
     response = requests.get(url)
     soup = BeautifulSoup(response.content, 'html.parser')
@@ -275,8 +264,7 @@ with st.expander("Kota Sukabumi"):
     
     st.dataframe(df, use_container_width=True, hide_index=True)
 
-with st.expander("Kota Bandung"):
-    # Ambil data dari URL
+if wilayah == 'Kota Bandung':
     url = 'https://referensi.data.kemdikbud.go.id/pendidikan/yayasan/026000/2'
     response = requests.get(url)
     soup = BeautifulSoup(response.content, 'html.parser')
@@ -287,8 +275,7 @@ with st.expander("Kota Bandung"):
     
     st.dataframe(df, use_container_width=True, hide_index=True)
     
-with st.expander("Kota Cirebon"):
-    # Ambil data dari URL
+if wilayah == 'Kota Cirebon':
     url = 'https://referensi.data.kemdikbud.go.id/pendidikan/yayasan/026300/2'
     response = requests.get(url)
     soup = BeautifulSoup(response.content, 'html.parser')
@@ -299,8 +286,7 @@ with st.expander("Kota Cirebon"):
     
     st.dataframe(df, use_container_width=True, hide_index=True)
     
-with st.expander("Kota Bekasi"):
-    # Ambil data dari URL
+if wilayah == 'Kota Bekasi':
     url = 'https://referensi.data.kemdikbud.go.id/pendidikan/yayasan/026500/2'
     response = requests.get(url)
     soup = BeautifulSoup(response.content, 'html.parser')
@@ -311,8 +297,7 @@ with st.expander("Kota Bekasi"):
     
     st.dataframe(df, use_container_width=True, hide_index=True)
 
-with st.expander("Kota Depok"):
-    # Ambil data dari URL
+if wilayah == 'Kota Depok':
     url = 'https://referensi.data.kemdikbud.go.id/pendidikan/yayasan/026600/2'
     response = requests.get(url)
     soup = BeautifulSoup(response.content, 'html.parser')
@@ -323,8 +308,7 @@ with st.expander("Kota Depok"):
     
     st.dataframe(df, use_container_width=True, hide_index=True)
 
-with st.expander("Kota Cimahi"):
-    # Ambil data dari URL
+if wilayah == 'Kota Cimahi':
     url = 'https://referensi.data.kemdikbud.go.id/pendidikan/yayasan/026700/2'
     response = requests.get(url)
     soup = BeautifulSoup(response.content, 'html.parser')
@@ -335,8 +319,7 @@ with st.expander("Kota Cimahi"):
     
     st.dataframe(df, use_container_width=True, hide_index=True)
 
-with st.expander("Kota Tasikmalaya"):
-    # Ambil data dari URL
+if wilayah == 'Kota Tasikmalaya':
     url = 'https://referensi.data.kemdikbud.go.id/pendidikan/yayasan/026800/2'
     response = requests.get(url)
     soup = BeautifulSoup(response.content, 'html.parser')
@@ -347,8 +330,7 @@ with st.expander("Kota Tasikmalaya"):
     
     st.dataframe(df, use_container_width=True, hide_index=True)
 
-with st.expander("Kota Banjar"):
-    # Ambil data dari URL
+if wilayah == 'Kota Banjar':
     url = 'https://referensi.data.kemdikbud.go.id/pendidikan/yayasan/026900/2'
     response = requests.get(url)
     soup = BeautifulSoup(response.content, 'html.parser')

@@ -27,7 +27,7 @@ mfd, mendagri = kamus()
 def main():
     st.header("DATA POKOK DESA/ KELURAHAN", divider='rainbow')
     st.success("Sumber: e-prodeskel Kemendagri")
-    with st.expander("Master File Desa"):
+    with st.expander("Referensi IDDESA"):
         mfd32 = pd.read_csv('data/mfd_23_1_32.csv', 
                             dtype={'kdkab':'str', 'kdkec':'str', 'kddesa':'str', 'iddesa':'str'})
         kolom1, kolom2 = st.columns(2)

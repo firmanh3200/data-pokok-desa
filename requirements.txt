@@ -4,3 +4,4 @@ requests
 xlsxwriter
 lxml
 beautifulsoup4
+plotly.express

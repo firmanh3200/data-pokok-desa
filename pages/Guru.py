@@ -7,7 +7,7 @@ from datetime import datetime
 # Ambil tanggal hari ini
 tanggal_hari_ini = datetime.now().strftime("%d-%m-%Y")
 
-st.header("Jumlah Peserta Didik")
+st.header("Jumlah Guru (PTK)")
 st.warning(f"Sumber: dapo.kemdikbud.go.id, Kondisi: {tanggal_hari_ini}")
 
 pilihantahun = ['2024', '2023', '2022', '2021', '2020', '2019']

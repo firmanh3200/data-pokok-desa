@@ -18,6 +18,7 @@ tahunterpilih = st.selectbox("Filter Tahun", pilihantahun, key='tahun')
 
 if tahunterpilih:
     # Fungsi untuk mengambil data dari API dengan parameter halaman
+    @st.cache_data
     def fetch_data(page, limit=25):
         url = f"https://portaldatadesa.jabarprov.go.id/api/idm/idmdataidentitas/v2?sub_name=TOTAL%20BELANJA%20APBDes&tahun={tahunterpilih}&order=asc&orderby=id_desa&page={page}&limit={limit}"
         response = requests.get(url)

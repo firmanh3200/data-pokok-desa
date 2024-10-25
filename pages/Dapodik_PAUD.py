@@ -71,6 +71,15 @@ if wilayah == 'Bogor':
     
     st.dataframe(df2, use_container_width=True, hide_index=True)
     
+    desa = df2['Kelurahan'].unique()
+    desaterpilih = st.selectbox("Pilih Desa/Kelurahan", desa, key='desa01')
+    
+    if desaterpilih:
+        df3 = df2[df2['Kelurahan'] == desaterpilih]
+        df3 = df3[['Kelurahan', 'Nama Satuan Pendidikan', 'Status', 'Alamat', 'NPSN']]
+        st.dataframe(df3, use_container_width=True, hide_index=True)
+    
+    
 
 if wilayah == 'Sukabumi':
     url = 'https://referensi.data.kemdikbud.go.id/pendidikan/paud/020600/2'
@@ -98,6 +107,15 @@ if wilayah == 'Sukabumi':
     df2 = pd.read_html(str(table2))[0]
     
     st.dataframe(df2, use_container_width=True, hide_index=True)
+    
+    desa = df2['Kelurahan'].unique()
+    desaterpilih = st.selectbox("Pilih Desa/Kelurahan", desa, key='desa01')
+    
+    if desaterpilih:
+        df3 = df2[df2['Kelurahan'] == desaterpilih]
+        df3 = df3[['Kelurahan', 'Nama Satuan Pendidikan', 'Status', 'Alamat', 'NPSN']]
+        st.dataframe(df3, use_container_width=True, hide_index=True)
+    
     
     
 if wilayah == 'Cianjur':
@@ -127,6 +145,15 @@ if wilayah == 'Cianjur':
     
     st.dataframe(df2, use_container_width=True, hide_index=True)
     
+    desa = df2['Kelurahan'].unique()
+    desaterpilih = st.selectbox("Pilih Desa/Kelurahan", desa, key='desa01')
+    
+    if desaterpilih:
+        df3 = df2[df2['Kelurahan'] == desaterpilih]
+        df3 = df3[['Kelurahan', 'Nama Satuan Pendidikan', 'Status', 'Alamat', 'NPSN']]
+        st.dataframe(df3, use_container_width=True, hide_index=True)
+    
+    
     
 if wilayah == 'Bandung': 
     url = 'https://referensi.data.kemdikbud.go.id/pendidikan/paud/020800/2'
@@ -154,6 +181,15 @@ if wilayah == 'Bandung':
     df2 = pd.read_html(str(table2))[0]
     
     st.dataframe(df2, use_container_width=True, hide_index=True)
+    
+    desa = df2['Kelurahan'].unique()
+    desaterpilih = st.selectbox("Pilih Desa/Kelurahan", desa, key='desa01')
+    
+    if desaterpilih:
+        df3 = df2[df2['Kelurahan'] == desaterpilih]
+        df3 = df3[['Kelurahan', 'Nama Satuan Pendidikan', 'Status', 'Alamat', 'NPSN']]
+        st.dataframe(df3, use_container_width=True, hide_index=True)
+    
     
 
 if wilayah == 'Garut':
@@ -183,6 +219,15 @@ if wilayah == 'Garut':
     
     st.dataframe(df2, use_container_width=True, hide_index=True)
     
+    desa = df2['Kelurahan'].unique()
+    desaterpilih = st.selectbox("Pilih Desa/Kelurahan", desa, key='desa01')
+    
+    if desaterpilih:
+        df3 = df2[df2['Kelurahan'] == desaterpilih]
+        df3 = df3[['Kelurahan', 'Nama Satuan Pendidikan', 'Status', 'Alamat', 'NPSN']]
+        st.dataframe(df3, use_container_width=True, hide_index=True)
+    
+    
     
 if wilayah == 'Tasikmalaya':
     url = 'https://referensi.data.kemdikbud.go.id/pendidikan/paud/021200/2'
@@ -210,6 +255,15 @@ if wilayah == 'Tasikmalaya':
     df2 = pd.read_html(str(table2))[0]
     
     st.dataframe(df2, use_container_width=True, hide_index=True)
+    
+    desa = df2['Kelurahan'].unique()
+    desaterpilih = st.selectbox("Pilih Desa/Kelurahan", desa, key='desa01')
+    
+    if desaterpilih:
+        df3 = df2[df2['Kelurahan'] == desaterpilih]
+        df3 = df3[['Kelurahan', 'Nama Satuan Pendidikan', 'Status', 'Alamat', 'NPSN']]
+        st.dataframe(df3, use_container_width=True, hide_index=True)
+    
     
     
 if wilayah == 'Ciamis':
@@ -239,6 +293,15 @@ if wilayah == 'Ciamis':
     
     st.dataframe(df2, use_container_width=True, hide_index=True)
     
+    desa = df2['Kelurahan'].unique()
+    desaterpilih = st.selectbox("Pilih Desa/Kelurahan", desa, key='desa01')
+    
+    if desaterpilih:
+        df3 = df2[df2['Kelurahan'] == desaterpilih]
+        df3 = df3[['Kelurahan', 'Nama Satuan Pendidikan', 'Status', 'Alamat', 'NPSN']]
+        st.dataframe(df3, use_container_width=True, hide_index=True)
+    
+    
     
 if wilayah == 'Kuningan':
     url = 'https://referensi.data.kemdikbud.go.id/pendidikan/paud/021500/2'
@@ -266,6 +329,15 @@ if wilayah == 'Kuningan':
     df2 = pd.read_html(str(table2))[0]
     
     st.dataframe(df2, use_container_width=True, hide_index=True)
+    
+    desa = df2['Kelurahan'].unique()
+    desaterpilih = st.selectbox("Pilih Desa/Kelurahan", desa, key='desa01')
+    
+    if desaterpilih:
+        df3 = df2[df2['Kelurahan'] == desaterpilih]
+        df3 = df3[['Kelurahan', 'Nama Satuan Pendidikan', 'Status', 'Alamat', 'NPSN']]
+        st.dataframe(df3, use_container_width=True, hide_index=True)
+    
     
 
 if wilayah == 'Cirebon':
@@ -295,6 +367,15 @@ if wilayah == 'Cirebon':
     
     st.dataframe(df2, use_container_width=True, hide_index=True)
     
+    desa = df2['Kelurahan'].unique()
+    desaterpilih = st.selectbox("Pilih Desa/Kelurahan", desa, key='desa01')
+    
+    if desaterpilih:
+        df3 = df2[df2['Kelurahan'] == desaterpilih]
+        df3 = df3[['Kelurahan', 'Nama Satuan Pendidikan', 'Status', 'Alamat', 'NPSN']]
+        st.dataframe(df3, use_container_width=True, hide_index=True)
+    
+    
 
 if wilayah == 'Majalengka':
     url = 'https://referensi.data.kemdikbud.go.id/pendidikan/paud/021600/2'
@@ -322,6 +403,15 @@ if wilayah == 'Majalengka':
     df2 = pd.read_html(str(table2))[0]
     
     st.dataframe(df2, use_container_width=True, hide_index=True)
+    
+    desa = df2['Kelurahan'].unique()
+    desaterpilih = st.selectbox("Pilih Desa/Kelurahan", desa, key='desa01')
+    
+    if desaterpilih:
+        df3 = df2[df2['Kelurahan'] == desaterpilih]
+        df3 = df3[['Kelurahan', 'Nama Satuan Pendidikan', 'Status', 'Alamat', 'NPSN']]
+        st.dataframe(df3, use_container_width=True, hide_index=True)
+    
     
 
 if wilayah == 'Sumedang':
@@ -351,6 +441,15 @@ if wilayah == 'Sumedang':
     
     st.dataframe(df2, use_container_width=True, hide_index=True)
     
+    desa = df2['Kelurahan'].unique()
+    desaterpilih = st.selectbox("Pilih Desa/Kelurahan", desa, key='desa01')
+    
+    if desaterpilih:
+        df3 = df2[df2['Kelurahan'] == desaterpilih]
+        df3 = df3[['Kelurahan', 'Nama Satuan Pendidikan', 'Status', 'Alamat', 'NPSN']]
+        st.dataframe(df3, use_container_width=True, hide_index=True)
+    
+    
 
 if wilayah == 'Indramayu':
     url = 'https://referensi.data.kemdikbud.go.id/pendidikan/paud/021800/2'
@@ -378,6 +477,15 @@ if wilayah == 'Indramayu':
     df2 = pd.read_html(str(table2))[0]
     
     st.dataframe(df2, use_container_width=True, hide_index=True)
+    
+    desa = df2['Kelurahan'].unique()
+    desaterpilih = st.selectbox("Pilih Desa/Kelurahan", desa, key='desa01')
+    
+    if desaterpilih:
+        df3 = df2[df2['Kelurahan'] == desaterpilih]
+        df3 = df3[['Kelurahan', 'Nama Satuan Pendidikan', 'Status', 'Alamat', 'NPSN']]
+        st.dataframe(df3, use_container_width=True, hide_index=True)
+    
     
 
 if wilayah == 'Subang':
@@ -407,6 +515,15 @@ if wilayah == 'Subang':
     
     st.dataframe(df2, use_container_width=True, hide_index=True)
     
+    desa = df2['Kelurahan'].unique()
+    desaterpilih = st.selectbox("Pilih Desa/Kelurahan", desa, key='desa01')
+    
+    if desaterpilih:
+        df3 = df2[df2['Kelurahan'] == desaterpilih]
+        df3 = df3[['Kelurahan', 'Nama Satuan Pendidikan', 'Status', 'Alamat', 'NPSN']]
+        st.dataframe(df3, use_container_width=True, hide_index=True)
+    
+    
 
 if wilayah == 'Purwakarta':
     url = 'https://referensi.data.kemdikbud.go.id/pendidikan/paud/022000/2'
@@ -434,6 +551,15 @@ if wilayah == 'Purwakarta':
     df2 = pd.read_html(str(table2))[0]
     
     st.dataframe(df2, use_container_width=True, hide_index=True)
+    
+    desa = df2['Kelurahan'].unique()
+    desaterpilih = st.selectbox("Pilih Desa/Kelurahan", desa, key='desa01')
+    
+    if desaterpilih:
+        df3 = df2[df2['Kelurahan'] == desaterpilih]
+        df3 = df3[['Kelurahan', 'Nama Satuan Pendidikan', 'Status', 'Alamat', 'NPSN']]
+        st.dataframe(df3, use_container_width=True, hide_index=True)
+    
     
 
 if wilayah == 'Karawang':
@@ -463,6 +589,15 @@ if wilayah == 'Karawang':
     
     st.dataframe(df2, use_container_width=True, hide_index=True)
     
+    desa = df2['Kelurahan'].unique()
+    desaterpilih = st.selectbox("Pilih Desa/Kelurahan", desa, key='desa01')
+    
+    if desaterpilih:
+        df3 = df2[df2['Kelurahan'] == desaterpilih]
+        df3 = df3[['Kelurahan', 'Nama Satuan Pendidikan', 'Status', 'Alamat', 'NPSN']]
+        st.dataframe(df3, use_container_width=True, hide_index=True)
+    
+    
 
 if wilayah == 'Bekasi':
     url = 'https://referensi.data.kemdikbud.go.id/pendidikan/paud/022200/2'
@@ -490,6 +625,15 @@ if wilayah == 'Bekasi':
     df2 = pd.read_html(str(table2))[0]
     
     st.dataframe(df2, use_container_width=True, hide_index=True)
+    
+    desa = df2['Kelurahan'].unique()
+    desaterpilih = st.selectbox("Pilih Desa/Kelurahan", desa, key='desa01')
+    
+    if desaterpilih:
+        df3 = df2[df2['Kelurahan'] == desaterpilih]
+        df3 = df3[['Kelurahan', 'Nama Satuan Pendidikan', 'Status', 'Alamat', 'NPSN']]
+        st.dataframe(df3, use_container_width=True, hide_index=True)
+    
     
 
 if wilayah == 'Bandung Barat':
@@ -519,6 +663,15 @@ if wilayah == 'Bandung Barat':
     
     st.dataframe(df2, use_container_width=True, hide_index=True)
     
+    desa = df2['Kelurahan'].unique()
+    desaterpilih = st.selectbox("Pilih Desa/Kelurahan", desa, key='desa01')
+    
+    if desaterpilih:
+        df3 = df2[df2['Kelurahan'] == desaterpilih]
+        df3 = df3[['Kelurahan', 'Nama Satuan Pendidikan', 'Status', 'Alamat', 'NPSN']]
+        st.dataframe(df3, use_container_width=True, hide_index=True)
+    
+    
 
 if wilayah == 'Pangandaran':
     url = 'https://referensi.data.kemdikbud.go.id/pendidikan/paud/022500/2'
@@ -546,6 +699,15 @@ if wilayah == 'Pangandaran':
     df2 = pd.read_html(str(table2))[0]
     
     st.dataframe(df2, use_container_width=True, hide_index=True)
+    
+    desa = df2['Kelurahan'].unique()
+    desaterpilih = st.selectbox("Pilih Desa/Kelurahan", desa, key='desa01')
+    
+    if desaterpilih:
+        df3 = df2[df2['Kelurahan'] == desaterpilih]
+        df3 = df3[['Kelurahan', 'Nama Satuan Pendidikan', 'Status', 'Alamat', 'NPSN']]
+        st.dataframe(df3, use_container_width=True, hide_index=True)
+    
     
 
 if wilayah == 'Kota Bogor':
@@ -575,6 +737,15 @@ if wilayah == 'Kota Bogor':
     
     st.dataframe(df2, use_container_width=True, hide_index=True)
     
+    desa = df2['Kelurahan'].unique()
+    desaterpilih = st.selectbox("Pilih Desa/Kelurahan", desa, key='desa01')
+    
+    if desaterpilih:
+        df3 = df2[df2['Kelurahan'] == desaterpilih]
+        df3 = df3[['Kelurahan', 'Nama Satuan Pendidikan', 'Status', 'Alamat', 'NPSN']]
+        st.dataframe(df3, use_container_width=True, hide_index=True)
+    
+    
 
 if wilayah == 'Kota Sukabumi':
     url = 'https://referensi.data.kemdikbud.go.id/pendidikan/paud/026200/2'
@@ -602,6 +773,15 @@ if wilayah == 'Kota Sukabumi':
     df2 = pd.read_html(str(table2))[0]
     
     st.dataframe(df2, use_container_width=True, hide_index=True)
+    
+    desa = df2['Kelurahan'].unique()
+    desaterpilih = st.selectbox("Pilih Desa/Kelurahan", desa, key='desa01')
+    
+    if desaterpilih:
+        df3 = df2[df2['Kelurahan'] == desaterpilih]
+        df3 = df3[['Kelurahan', 'Nama Satuan Pendidikan', 'Status', 'Alamat', 'NPSN']]
+        st.dataframe(df3, use_container_width=True, hide_index=True)
+    
     
 
 if wilayah == 'Kota Bandung':
@@ -631,6 +811,15 @@ if wilayah == 'Kota Bandung':
     
     st.dataframe(df2, use_container_width=True, hide_index=True)
     
+    desa = df2['Kelurahan'].unique()
+    desaterpilih = st.selectbox("Pilih Desa/Kelurahan", desa, key='desa01')
+    
+    if desaterpilih:
+        df3 = df2[df2['Kelurahan'] == desaterpilih]
+        df3 = df3[['Kelurahan', 'Nama Satuan Pendidikan', 'Status', 'Alamat', 'NPSN']]
+        st.dataframe(df3, use_container_width=True, hide_index=True)
+    
+    
     
 if wilayah == 'Kota Cirebon':
     url = 'https://referensi.data.kemdikbud.go.id/pendidikan/paud/026300/2'
@@ -658,6 +847,15 @@ if wilayah == 'Kota Cirebon':
     df2 = pd.read_html(str(table2))[0]
     
     st.dataframe(df2, use_container_width=True, hide_index=True)
+    
+    desa = df2['Kelurahan'].unique()
+    desaterpilih = st.selectbox("Pilih Desa/Kelurahan", desa, key='desa01')
+    
+    if desaterpilih:
+        df3 = df2[df2['Kelurahan'] == desaterpilih]
+        df3 = df3[['Kelurahan', 'Nama Satuan Pendidikan', 'Status', 'Alamat', 'NPSN']]
+        st.dataframe(df3, use_container_width=True, hide_index=True)
+    
     
     
 if wilayah == 'Kota Bekasi':
@@ -687,6 +885,15 @@ if wilayah == 'Kota Bekasi':
     
     st.dataframe(df2, use_container_width=True, hide_index=True)
     
+    desa = df2['Kelurahan'].unique()
+    desaterpilih = st.selectbox("Pilih Desa/Kelurahan", desa, key='desa01')
+    
+    if desaterpilih:
+        df3 = df2[df2['Kelurahan'] == desaterpilih]
+        df3 = df3[['Kelurahan', 'Nama Satuan Pendidikan', 'Status', 'Alamat', 'NPSN']]
+        st.dataframe(df3, use_container_width=True, hide_index=True)
+    
+    
 
 if wilayah == 'Kota Depok':
     url = 'https://referensi.data.kemdikbud.go.id/pendidikan/paud/026600/2'
@@ -714,6 +921,15 @@ if wilayah == 'Kota Depok':
     df2 = pd.read_html(str(table2))[0]
     
     st.dataframe(df2, use_container_width=True, hide_index=True)
+    
+    desa = df2['Kelurahan'].unique()
+    desaterpilih = st.selectbox("Pilih Desa/Kelurahan", desa, key='desa01')
+    
+    if desaterpilih:
+        df3 = df2[df2['Kelurahan'] == desaterpilih]
+        df3 = df3[['Kelurahan', 'Nama Satuan Pendidikan', 'Status', 'Alamat', 'NPSN']]
+        st.dataframe(df3, use_container_width=True, hide_index=True)
+    
     
 
 if wilayah == 'Kota Cimahi':
@@ -743,6 +959,15 @@ if wilayah == 'Kota Cimahi':
     
     st.dataframe(df2, use_container_width=True, hide_index=True)
     
+    desa = df2['Kelurahan'].unique()
+    desaterpilih = st.selectbox("Pilih Desa/Kelurahan", desa, key='desa01')
+    
+    if desaterpilih:
+        df3 = df2[df2['Kelurahan'] == desaterpilih]
+        df3 = df3[['Kelurahan', 'Nama Satuan Pendidikan', 'Status', 'Alamat', 'NPSN']]
+        st.dataframe(df3, use_container_width=True, hide_index=True)
+    
+    
 
 if wilayah == 'Kota Tasikmalaya':
     url = 'https://referensi.data.kemdikbud.go.id/pendidikan/paud/026800/2'
@@ -771,6 +996,15 @@ if wilayah == 'Kota Tasikmalaya':
     
     st.dataframe(df2, use_container_width=True, hide_index=True)
     
+    desa = df2['Kelurahan'].unique()
+    desaterpilih = st.selectbox("Pilih Desa/Kelurahan", desa, key='desa01')
+    
+    if desaterpilih:
+        df3 = df2[df2['Kelurahan'] == desaterpilih]
+        df3 = df3[['Kelurahan', 'Nama Satuan Pendidikan', 'Status', 'Alamat', 'NPSN']]
+        st.dataframe(df3, use_container_width=True, hide_index=True)
+    
+    
 
 if wilayah == 'Kota Banjar':
     url = 'https://referensi.data.kemdikbud.go.id/pendidikan/paud/026900/2'
@@ -798,4 +1032,12 @@ if wilayah == 'Kota Banjar':
     df2 = pd.read_html(str(table2))[0]
     
     st.dataframe(df2, use_container_width=True, hide_index=True)
+    
+    desa = df2['Kelurahan'].unique()
+    desaterpilih = st.selectbox("Pilih Desa/Kelurahan", desa, key='desa01')
+    
+    if desaterpilih:
+        df3 = df2[df2['Kelurahan'] == desaterpilih]
+        df3 = df3[['Kelurahan', 'Nama Satuan Pendidikan', 'Status', 'Alamat', 'NPSN']]
+        st.dataframe(df3, use_container_width=True, hide_index=True)
     
